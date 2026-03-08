@@ -41,4 +41,22 @@ class ItemBiblioteca:
         print(f"Título: {self.__titulo}")
         print(f"Ano: {self.__ano}")
         print(f"Disponível: {self.__disponivel}")
+    
+
+    def emprestar(self):
+        if self.__disponivel:
+            self.__disponivel = False
+            print(f"Item '{self.__titulo}' emprestado com sucesso.")
+        else:
+            print(f"Item '{self.__titulo}' não está disponível.")
+
+    def devolver(self):
+        self.__disponivel = True
+        print(f"Item '{self.__titulo}' devolvido com sucesso.")
+
+    def exibir_detalhes(self):
+        print(f"Código: {self.__codigo}")
+        print(f"Título: {self.__titulo}")
+        print(f"Ano: {self.__ano}")
+        print(f"Disponível: {self.__disponivel}")
 
